@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="WeaponItem" format=3 uid="uid://7vyjmboah3uj"]
+
+[ext_resource type="Script" uid="uid://dpj4wmicfv5x7" path="res://scripts/weapon_item.gd" id="1_0j33w"]
+[ext_resource type="Texture2D" uid="uid://d1b37nur4wvvi" path="res://icon.svg" id="1_d4w4i"]
+[ext_resource type="PackedScene" uid="uid://cy3qfw5vg16cn" path="res://scenes/weapons/sword_hitbox.tscn" id="2_cn7cd"]
+
+[resource]
+script = ExtResource("1_0j33w")
+weapon_scene = ExtResource("2_cn7cd")
+moveset_note = "ssss"
+description = "ss"
+icon = ExtResource("1_d4w4i")
+metadata/_custom_type_script = "uid://dpj4wmicfv5x7"

@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b6rnb38l5iimt"]
+
+[ext_resource type="Texture2D" uid="uid://bnl6cj7hcpl84" path="res://assets/assets/models/pistol_0.png" id="1_i7t8r"]
+[ext_resource type="Shader" uid="uid://ci7v2d4hop4ao" path="res://scenes/shader/outline.gdshader" id="1_odpwt"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sj7n0"]
+render_priority = 0
+shader = ExtResource("1_odpwt")
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+shader_parameter/outline_width = 1.0
+
+[resource]
+next_pass = SubResource("ShaderMaterial_sj7n0")
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("1_i7t8r")

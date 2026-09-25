@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bohrdnkm72kds"]
+
+[ext_resource type="Script" uid="uid://e32v25jors0x" path="res://scripts/item_pickup.gd" id="1_m825k"]
+[ext_resource type="Resource" uid="uid://7vyjmboah3uj" path="res://scripts/resources/sword2.tres" id="2_ya8dl"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ya8dl"]
+size = Vector3(0.8327637, 0.101745605, 0.037109375)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uglra"]
+albedo_color = Color(1, 0, 0.41568628, 1)
+emission_enabled = true
+emission = Color(0.91764706, 0, 0, 1)
+emission_energy_multiplier = 16.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ya8dl"]
+material = SubResource("StandardMaterial3D_uglra")
+top_radius = 0.013183594
+bottom_radius = 0.013183594
+height = 0.82354736
+
+[node name="swordpickup" type="Area3D" unique_id=1696680551]
+script = ExtResource("1_m825k")
+item = ExtResource("2_ya8dl")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=658141807]
+transform = Transform3D(1.0000038, -3.3527613e-08, 0, -6.3329935e-08, 1.000006, 2.4912879e-08, 2.1979213e-07, -4.5471825e-07, 1.0000037, 0.4186662, 0.015598774, 0.024005994)
+shape = SubResource("BoxShape3D_ya8dl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2057193521]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0.42724168, 0.015598774, 0.024005994)
+mesh = SubResource("CylinderMesh_ya8dl")

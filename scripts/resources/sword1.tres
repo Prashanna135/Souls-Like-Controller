@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="WeaponItem" format=3 uid="uid://ddy025kyt1ic8"]
+
+[ext_resource type="Texture2D" uid="uid://d1b37nur4wvvi" path="res://icon.svg" id="1_bc164"]
+[ext_resource type="Script" uid="uid://dpj4wmicfv5x7" path="res://scripts/weapon_item.gd" id="1_xtgvn"]
+[ext_resource type="PackedScene" uid="uid://c16vfur5l8ewn" path="res://scenes/weapons/sword.tscn" id="2_q6p5g"]
+
+[resource]
+script = ExtResource("1_xtgvn")
+weapon_scene = ExtResource("2_q6p5g")
+moveset_note = "sss"
+description = "sss"
+icon = ExtResource("1_bc164")
+metadata/_custom_type_script = "uid://dpj4wmicfv5x7"

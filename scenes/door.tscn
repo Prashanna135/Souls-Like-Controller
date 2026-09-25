@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://dlpdx2hr0f4ut"]
+
+[ext_resource type="Script" uid="uid://dkppn7ondsxb4" path="res://scripts/door.gd" id="1_hpvv5"]
+
+[sub_resource type="Animation" id="Animation_hpvv5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("door:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.0076293945, 0.55357635, -0.062164307)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("door:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_uvdjg"]
+resource_name = "open"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("door:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.0076293945, 0.55357635, -0.062164307), Vector3(0.23193926, 0.55357635, 0.36324757)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("door:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 1.0471976, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_83dcw"]
+_data = {
+&"RESET": SubResource("Animation_hpvv5"),
+&"open": SubResource("Animation_uvdjg")
+}
+
+[sub_resource type="BoxMesh" id="BoxMesh_g4v7s"]
+size = Vector3(0.88171387, 1.194458, 0.19683838)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yf5fn"]
+size = Vector3(0.8894043, 1.0883789, 0.15966797)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hpvv5"]
+size = Vector3(0.8894043, 1.0883789, 0.55981445)
+
+[node name="door" type="Area3D" unique_id=2015290243]
+script = ExtResource("1_hpvv5")
+open_animation_name = &"open"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=909112849]
+libraries/ = SubResource("AnimationLibrary_83dcw")
+
+[node name="door" type="MeshInstance3D" parent="." unique_id=2094989749]
+transform = Transform3D(2.8032835, 0, 0, 0, 2.8032835, 0, 0, 0, 2.8032835, 0.0076293945, 0.55357635, -0.062164307)
+mesh = SubResource("BoxMesh_g4v7s")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="door" unique_id=149350108]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="door/StaticBody3D" unique_id=1690561660]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00012207031, 0.044189453, 0.009033203)
+shape = SubResource("BoxShape3D_yf5fn")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1831257431]
+transform = Transform3D(2.8032835, 0, 0, 0, 2.8032835, 0, 0, 0, 2.8032835, -0.20935827, 0.53572583, -0.40396944)
+shape = SubResource("BoxShape3D_hpvv5")

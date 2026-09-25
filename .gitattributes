@@ -1,0 +1,9 @@
+# Normalize line endings
+* text=auto eol=lf
+
+# Kept in the repo, stripped from the Asset Library download.
+# vrm_samples/ is the VRM addon's own demo content — not part of the
+# template — so it doesn't belong in anyone else's download.
+/vrm_samples/   export-ignore
+/.github/       export-ignore
+/.vscode/       export-ignore

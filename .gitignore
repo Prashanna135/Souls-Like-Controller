@@ -1,0 +1,13 @@
+.godot/
+export/
+export_presets.cfg
+*.exe
+*.apk
+*.idsig
+*.pck
+*.tmp
+*~
+*.unwrap_cache
+.DS_Store
+Thumbs.db
+.agent_scenarios/

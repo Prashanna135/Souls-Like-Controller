@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://bdb0b7rqbp75b"]
+
+[ext_resource type="Script" uid="uid://drawee6cr6xg7" path="res://scripts/ladder.gd" id="1_xxwne"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
+size = Vector3(0.47473145, 3.0996094, 0.2208252)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xxwne"]
+size = Vector3(0.7, 0.05, 0.05)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xb1tl"]
+size = Vector3(0.1, 4.015, 0.1)
+
+[node name="Ladder" type="Area3D" unique_id=97847823]
+script = ExtResource("1_xxwne")
+
+[node name="TopMarker" type="Marker3D" parent="." unique_id=372338769]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1489172, 3.168948, 0)
+
+[node name="BottomMarker" type="Marker3D" parent="." unique_id=200745205]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03695807, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2006333347]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12982178, 1.5212126, -0.007751465)
+shape = SubResource("BoxShape3D_g4v7s")
+
+[node name="JustRungs" type="Node3D" parent="." unique_id=1713872422]
+transform = Transform3D(0.7638521, 0, 0, 0, 0.8193022, 0, 0, 0, 0.8286036, -0.00937143, 0, 0.23743723)
+
+[node name="Rung1" type="MeshInstance3D" parent="JustRungs" unique_id=242008679]
+mesh = SubResource("BoxMesh_xxwne")
+
+[node name="Rung2" type="MeshInstance3D" parent="JustRungs" unique_id=1023223466]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+mesh = SubResource("BoxMesh_xxwne")
+
+[node name="Rung3" type="MeshInstance3D" parent="JustRungs" unique_id=1485396600]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+mesh = SubResource("BoxMesh_xxwne")
+
+[node name="Rung4" type="MeshInstance3D" parent="JustRungs" unique_id=1185944252]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
+mesh = SubResource("BoxMesh_xxwne")
+
+[node name="Rung5" type="MeshInstance3D" parent="JustRungs" unique_id=331577338]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+mesh = SubResource("BoxMesh_xxwne")
+
+[node name="Rung6" type="MeshInstance3D" parent="JustRungs" unique_id=1465617827]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+mesh = SubResource("BoxMesh_xxwne")
+
+[node name="Rung7" type="MeshInstance3D" parent="JustRungs" unique_id=157433886]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3, 0)
+mesh = SubResource("BoxMesh_xxwne")
+
+[node name="Rung8" type="MeshInstance3D" parent="JustRungs" unique_id=1796821825]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.68479, 0)
+mesh = SubResource("BoxMesh_xxwne")
+
+[node name="Rung9" type="MeshInstance3D" parent="JustRungs" unique_id=1691084668]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.08479, 0)
+mesh = SubResource("BoxMesh_xxwne")
+
+[node name="Rung10" type="MeshInstance3D" parent="JustRungs" unique_id=2022091757]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.48479, 0)
+mesh = SubResource("BoxMesh_xxwne")
+
+[node name="Rung11" type="MeshInstance3D" parent="JustRungs" unique_id=1935685290]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.88479, 0)
+mesh = SubResource("BoxMesh_xxwne")
+
+[node name="Side" type="MeshInstance3D" parent="JustRungs" unique_id=289123498]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.388735, 1.93685, 0)
+mesh = SubResource("BoxMesh_xb1tl")
+
+[node name="Side2" type="MeshInstance3D" parent="JustRungs" unique_id=2011701336]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.391508, 1.93685, 0)
+mesh = SubResource("BoxMesh_xb1tl")

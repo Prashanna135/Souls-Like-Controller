@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ConsumableItem" format=3 uid="uid://c2f4tfm5xm6ud"]
+
+[ext_resource type="Script" uid="uid://cllnin6k1r0yy" path="res://scripts/consumable_item.gd" id="1_2vk6a"]
+[ext_resource type="Texture2D" uid="uid://d1b37nur4wvvi" path="res://icon.svg" id="1_4ngkd"]
+
+[resource]
+script = ExtResource("1_2vk6a")
+item_name = "healthpotion"
+description = "dd"
+icon = ExtResource("1_4ngkd")
+metadata/_custom_type_script = "uid://cllnin6k1r0yy"
